@@ -45,7 +45,7 @@ Now your flow would be → main.go -> root.go → dig.go
 Now you could also see the dig.go file created in your existing file structure.
 That's it. Done. Jump to code now…
 
-Step 3:
+# Connect to cluster and config root.go
 
 a. Connect to your cluster using “kubeconfig” REST API call → root.go
 The changes required in “step a” needs to be implemented in the root.go wherein you just need to provide the path of your own config file 
