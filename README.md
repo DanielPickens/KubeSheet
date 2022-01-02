@@ -12,7 +12,7 @@ Install  the cobra library:
 cobra init --package-name kubewrap
 ```
 
-It will initialize the “kubewrap” project with cobra the library. You can observe that it created a few files in the project.
+It will initialize the “kubewrap” project with cobra the library. 
 
 # Folder structure after cobra
 
