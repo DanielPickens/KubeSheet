@@ -24,6 +24,10 @@ It will initialize the “kubewrap” project with cobra the library.
  kubewrap
 
 ```
+# Install package dependencies
+```
+go get https://github.com/DanielPickens/Kubewrap.git
+```
 
 kubewrap is a root command and dig is a sub command to that
 In the future, you could have a set of subcommands such as below
