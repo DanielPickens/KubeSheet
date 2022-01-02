@@ -15,13 +15,14 @@ cobra init --package-name kubewrap
 It will initialize the “kubewrap” project with cobra the library. 
 
 
-# install minikube
-So to recall the flow main.go -> root.go
-At this point, you could test it by executing below commands inside kubewrap folder. Note Minikube must be installed as it'll need to check for default server to connect to in process.
+# Set up minikube
+
+ Execute below commands inside kubewrap folder. Minikube must be installed as it'll need to check for default server to connect to.
 ```
  go install
  
  kubewrap
+
 ```
 
 kubewrap is a root command and dig is a sub command to that
