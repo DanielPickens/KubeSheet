@@ -2,16 +2,19 @@
 
 kubewrap is an kubernetes cli wrapper with a focus to explore the kubernetes REST API's leveraging the go libraries available along with golang and cobra package.
 
-If you still haven’t installed the cobra library, you can install it using the below command.
+Install  the cobra library:
 ```
  go get -u github.com/spf13/cobra/cobra
  ```
-##Next, create your CLI skeleton simply by executing below command
+# Next, create your CLI skeleton simply by executing below command
 
+```
+cobra init --package-name kubewrap
+```
 
 It will initialize the “kubewrap” project with cobra the library. You can observe that it created a few files in the project.
 
-##Folder structure after cobra
+# Folder structure after cobra
 Lets quickly understand the files created and its use here
 root.go → is the file created for the root command. If you know that for a CLI utility, there would be a root command followed by some set of sub-commands and flags. Therefore, root.go will take care of all logic required for the main/root command.
 main.go → as the name says, its the main entry point for your CLI utility. Simply, requirement is just a call to a function present in the root.go
