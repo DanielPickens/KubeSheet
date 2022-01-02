@@ -1,5 +1,5 @@
 /*
-Copyright © 2020 AMIT PANDIT apandit5@uncc.edu
+Copyright © 2022 Daniel Pickens
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
