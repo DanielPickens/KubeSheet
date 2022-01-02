@@ -56,4 +56,4 @@ b. Once connected, you would simply make a call to rest API to
 ```
 “list pods available” → dig.go
 ```
-Simple, go to dig.go and follow the cha changes required to make a call to the REST API to list all the pods available in the cluster.
+Simple, go to dig.go and follow the changes required to make a call to the REST API to list all the pods available in the cluster.
