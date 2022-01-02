@@ -6,7 +6,7 @@ Install  the cobra library:
 ```
  go get -u github.com/spf13/cobra/cobra
  ```
-# Next, create your CLI skeleton simply by executing below command
+# Next, create your CLI skeleton 
 
 ```
 cobra init --package-name kubewrap
