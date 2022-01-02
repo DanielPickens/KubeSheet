@@ -40,7 +40,7 @@ will list out all the pods
 will list out all the deployments…vice versa.
 So, to extend our existing skeleton to have subcommand, just execute the below
 
-For you, it should be "kubewrap” folder. Again ignore here testkube
+Locate to the "kubewrap” folder. Again ignore here testkube
 Now your flow would be → main.go -> root.go → dig.go
 Now you could also see the dig.go file created in your existing file structure.
 That's it. Done. Jump to code now…
@@ -50,7 +50,7 @@ Step 3:
 a. Connect to your cluster using “kubeconfig” REST API call → root.go
 The changes required in “step a” needs to be implemented in the root.go wherein you just need to provide the path of your own config file 
 
- find config in root.go and  change the config file path above when required.
+Locate to the config in root.go and  change the config file path above when required.
 In root.go you just need to have above function which takes care of connecting to the minkube cluster using a REST call.  
 b. Once connected, you would simply make a call to rest API to
 ```
