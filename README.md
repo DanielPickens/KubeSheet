@@ -25,9 +25,13 @@ At this point, you could test it by executing below commands inside kubewrap fol
 
 kubewrap is a root command and dig is a sub command to that
 In the future, you could have a set of subcommands such as below
->> kubewrap dig1
+```
+ kubewrap dig1
+ ```
 will list out all the pods
->> kubewrap dig2
+```
+ kubewrap dig2
+ ```
 will list out all the deployments…vice versa.
 So, to extend our existing skeleton to have subcommand, just execute the below
 
@@ -35,7 +39,8 @@ For you, it should be "kubewrap” folder. Again ignore here testkube
 Now your flow would be → main.go -> root.go → dig.go
 Now you could also see the dig.go file created in your existing file structure.
 That's it. Done. Jump to code now…
-Step 3: Code your own sample GO REST API to “list pods available in your cluster”
+
+Step 3:
 Roughly we would be doing following code changes in your existing files created using cobra
 a. Connect to your cluster using “kubeconfig” REST API call → root.go
 The changes required in “step a” needs to be implemented in the root.go wherein you just need to provide the path of your own config file 
