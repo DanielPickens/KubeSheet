@@ -15,8 +15,8 @@ cobra init --package-name kubewrap
 It will initialize the “kubewrap” project with cobra the library. You can observe that it created a few files in the project.
 
 # Folder structure after cobra
-Lets quickly understand the files created and its use here
-root.go → is the file created for the root command. If you know that for a CLI utility, there would be a root command followed by some set of sub-commands and flags. Therefore, root.go will take care of all logic required for the main/root command.
+
+root.go → is the file created for the root command. In this CLI utility, there would be a root command followed by some set of sub-commands and flags. Therefore, root.go will take care of all logic required for the main/root command.
 main.go → as the name says, its the main entry point for your CLI utility. Simply, requirement is just a call to a function present in the root.go
 
 So to recall the flow main.go -> root.go
@@ -50,7 +50,7 @@ Step 3:
 a. Connect to your cluster using “kubeconfig” REST API call → root.go
 The changes required in “step a” needs to be implemented in the root.go wherein you just need to provide the path of your own config file 
 
-Refer to complete config in root.go and do change the config file path above
+ find config in root.go and  change the config file path above when required.
 In root.go you just need to have above function which takes care of connecting to the minkube cluster using a REST call.  
 b. Once connected, you would simply make a call to rest API to
 ```
