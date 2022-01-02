@@ -24,7 +24,6 @@ At this point, you could test it by executing below commands inside kubewrap fol
  kubewrap
 ```
 
-
 kubewrap is a root command and dig is a sub command to that
 In the future, you could have a set of subcommands such as below
 ```
