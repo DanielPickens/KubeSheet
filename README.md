@@ -14,11 +14,8 @@ cobra init --package-name kubewrap
 
 It will initialize the “kubewrap” project with cobra the library. 
 
-# Folder structure after cobra
 
-root.go → is the file created for the root command. In this CLI utility, there would be a root command followed by some set of sub-commands and flags. Therefore, root.go will take care of all logic required for the main/root command.
-main.go → as the name says, its the main entry point for your CLI utility. Simply, requirement is just a call to a function present in the root.go
-
+# install minikube
 So to recall the flow main.go -> root.go
 At this point, you could test it by executing below commands inside kubewrap folder. Note Minikube must be installed as it'll need to check for default server to connect to in process.
 ```
