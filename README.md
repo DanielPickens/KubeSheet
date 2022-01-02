@@ -1,6 +1,6 @@
 # Kubewrap
 
-kubewrap is an kubernetes command line utility with a focus to explore the kubernetes REST API's leveraging the go libraries available along with golang and cobra package.
+kubewrap is an kubernetes cli wrapper with a focus to explore the kubernetes REST API's leveraging the go libraries available along with golang and cobra package.
 
 If you still haven’t installed the cobra library, you can install it using the below command.
 ```
