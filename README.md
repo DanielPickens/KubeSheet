@@ -21,7 +21,7 @@ At this point, you could test it by executing below commands inside kubewrap fol
  go install
  kubewrap
 ```
-Now let's say if we want to create CLI tool like below to list out the pods available in the cluster
+
 
 kubewrap is a root command and dig is a sub command to that
 In the future, you could have a set of subcommands such as below
@@ -38,7 +38,7 @@ That's it. Done. Jump to code now…
 Step 3: Code your own sample GO REST API to “list pods available in your cluster”
 Roughly we would be doing following code changes in your existing files created using cobra
 a. Connect to your cluster using “kubeconfig” REST API call → root.go
-The changes required in “step a” needs to be implemented in the root.go wherein you just need to provide the path of your own config file [ the path of the file which we discussed earlier in the article]
+The changes required in “step a” needs to be implemented in the root.go wherein you just need to provide the path of your own config file 
 
 Refer to complete root.go code on a git repository and do change the config file path above
 In root.go you just need to have above function which takes care of connecting to the minkube cluster using a REST call. Now since this is a snip of code, you still need to import packages. Refer to the complete code of root.go on git.
