@@ -86,5 +86,7 @@ Lastly, go to dig.go and follow the changes required to make a call to the REST 
 # Testing
 ```
 go install
+```
+```
 kubewrap dig
 ```
