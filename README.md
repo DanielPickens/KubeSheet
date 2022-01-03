@@ -20,8 +20,9 @@ It will initialize the “kubewrap” project with cobra the library.
  Execute below commands inside kubewrap folder. Minikube must be installed as it'll need to check for default server to connect to.
 ```
  go install
- 
- kubewrap
+```
+
+```
 
 In powershell as admin:
 New-Item -Path 'c:\' -Name 'minikube' -ItemType Directory -Force
