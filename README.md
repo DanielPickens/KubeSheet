@@ -65,8 +65,10 @@ will list out all the pods
  kubewrap dig2
  ```
 This will list out all the deployments…vice versa.
-So, to extend the existing skeleton to have subcommand be connecte to the first command via the root.go
-
+So, to extend our existing skeleton to have subcommand, just execute the below:
+```
+cobra add dig
+```
 
 # Connect to cluster and config root.go
 
@@ -80,3 +82,9 @@ b. Once connected, you would simply make a call to rest API to
 “list pods available” → dig.go
 ```
 Lastly, go to dig.go and follow the changes required to make a call to the REST API to list all the pods available in the cluster.
+
+# Testing
+```
+go install
+
+```
