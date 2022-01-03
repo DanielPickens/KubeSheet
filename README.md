@@ -38,6 +38,17 @@ if ($oldPath.Split(';') -inotcontains 'C:\minikube'){ `
 
 
 ```
+
+# Docker
+
+```
+docker build -o Kubewrap main.go 
+```
+
+```
+docker pull KubeWrap:latest
+```
+
 # Install package dependencies
 ```
 go get https://github.com/DanielPickens/Kubewrap.git
