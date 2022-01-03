@@ -56,7 +56,7 @@ func init() {
   //fmt.Println("inside init")
   cobra.OnInitialize(initConfig)
 
-  rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.mykube.yaml)")
+  rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.Kubewrap.yaml)")
 
   rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
