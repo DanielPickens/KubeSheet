@@ -46,7 +46,10 @@ docker build -o Kubewrap main.go
 ```
 
 ```
-docker pull KubeWrap:latest
+docker pull Kubewrap:latest
+```
+```
+docker run Kubewrap
 ```
 
 # Install package dependencies
