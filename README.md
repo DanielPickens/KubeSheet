@@ -65,11 +65,7 @@ will list out all the pods
  kubewrap dig2
  ```
 This will list out all the deployments…vice versa.
-So, to extend the existing skeleton to have subcommand, just execute the cmd
-
-Locate to the "kubewrap” folder. Again ignore here testkube
-Now your flow would be → main.go -> root.go → dig.go
-Now you could also see the dig.go file created in your existing file structure.
+So, to extend the existing skeleton to have subcommand be connecte to the first command via the root.go
 
 
 # Connect to cluster and config root.go
