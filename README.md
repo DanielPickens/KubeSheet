@@ -40,19 +40,19 @@ if ($oldPath.Split(';') -inotcontains 'C:\minikube'){ `
 # Docker
 
 ```
-docker build -o Kubewrap main.go 
+docker build -o kubewrap main.go 
 ```
 
 ```
-docker pull Kubewrap:latest
+docker pull kubewrap:latest
 ```
 ```
-docker run Kubewrap
+docker run kubewrap
 ```
 
 # Install package dependencies
 ```
-go get https://github.com/DanielPickens/Kubewrap.git
+go get https://github.com/DanielPickens/kubewrap.git
 ```
 
 kubewrap is a root command and dig is a sub command to that
