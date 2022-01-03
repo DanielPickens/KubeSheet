@@ -1,6 +1,6 @@
-# Kuberamp
+# Kubewrap
 
-kuberamp is an kubernetes cli wrapper with a focus to explore the kubernetes REST API's leveraging the go libraries available along with golang and cobra package.
+kubewrap is an kubernetes cli wrapper with a focus to explore the kubernetes REST API's leveraging the go libraries available along with golang and cobra package.
 
 # Install  the cobra library:
 ```
@@ -9,15 +9,15 @@ kuberamp is an kubernetes cli wrapper with a focus to explore the kubernetes RES
 # Next, create the CLI skeleton 
 
 ```
-cobra init --package-name kuberamp
+cobra init --package-name kubewrap
 ```
 
-It will initialize the “kuberamp” project with cobra the library. 
+It will initialize the “kubewrap” project with cobra the library. 
 
 
 # Set up minikube
 
- Execute below commands inside kuberamp folder. Minikube must be installed as it'll need to check for default server to connect to.
+ Execute below commands inside kubewrap folder. Minikube must be installed as it'll need to check for default server to connect to.
 ```
  go install
 ```
@@ -40,7 +40,7 @@ if ($oldPath.Split(';') -inotcontains 'C:\minikube'){ `
 # Docker
 
 ```
-docker build -o Kuberamp main.go 
+docker build -o Kubewrap main.go 
 ```
 
 ```
@@ -58,16 +58,16 @@ go get https://github.com/DanielPickens/Kubewrap.git
 kubewrap is a root command and dig is a sub command to that
 In the future, you could have a set of subcommands such as below
 ```
- kuberamp dig1
+ kubewrap dig1
  ```
 will list out all the pods
 ```
- kuberamp dig2
+ kubewrap dig2
  ```
 This will list out all the deployments…vice versa.
 So, to extend the existing skeleton to have subcommand, just execute the cmd
 
-Locate to the "kuberamp” folder. Again ignore here testkube
+Locate to the "kubewrap” folder. Again ignore here testkube
 Now your flow would be → main.go -> root.go → dig.go
 Now you could also see the dig.go file created in your existing file structure.
 
