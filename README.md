@@ -55,8 +55,8 @@ docker run kubewrap
 go get https://github.com/DanielPickens/kubewrap.git
 ```
 
-kubewrap is a root command and dig is a sub command to that
-In the future, you could have a set of subcommands such as below
+kubewrap is a root command and dig is a sub command to that.
+For this case, we could have a set of subcommands such as below
 ```
  kubewrap dig1
  ```
