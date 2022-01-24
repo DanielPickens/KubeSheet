@@ -72,12 +72,12 @@ cobra add dig
 
 # Connect to cluster and config root.go
 
-a. Connect to your cluster using “kubeconfig” REST API call → root.go
+a. Connect to a cluster using “kubeconfig” REST API call → root.go
 The changes required in “step a” needs to be implemented in the root.go wherein you just need to provide the path of your own config file.
 
 Locate to the config in root.go and change the config file path above when required.
-In root.go you just need to have above function which takes care of connecting to the minkube cluster using a REST call.  
-b. Once connected, you would simply make a call to rest API to
+In root.go you'll just need to have above function which takes care of connecting to the minkube cluster using a REST call.  
+b. Once connected, you would simply need to make a call to rest API to
 ```
 “list pods available” → dig.go
 ```
