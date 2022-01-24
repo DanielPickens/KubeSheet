@@ -6,7 +6,7 @@ kubewrap is an kubernetes cli wrapper with a focus to explore the kubernetes RES
 ```
  go get -u github.com/spf13/cobra/cobra
  ```
-# Next, initialize the CLI skeleton 
+# Next, create the CLI skeleton 
 
 ```
 cobra init --package-name kubewrap
