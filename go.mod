@@ -1,4 +1,4 @@
-module github.com/DanielPickens/kubewrap/new/main
+module github.com/DanielPickens/kubewrap
 
 go 1.16
 
