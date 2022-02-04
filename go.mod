@@ -4,5 +4,5 @@ go 1.17
 
 require (
 	
-	sigs.k8s.io/yaml v1.2.0
+	sigs.k8s.io/apiserver-network-proxy/konnectivity-client
 )
