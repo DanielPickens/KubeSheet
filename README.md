@@ -86,11 +86,11 @@ The changes required in “step a” needs to be implemented in the root.go wher
 
 Locate to the config in root.go and change the config file path above when required.
 In root.go you'll just need to have above function which takes care of connecting to the minkube cluster using a REST call.  
-b. Once connected, you would simply need to make a call to rest API to
+b. Once connected, you would simply need to make a call to rest API to:
 ```
 “list pods available” → dig.go
 ```
-Lastly, go to dig.go and follow the changes required to make a call to the REST API to list all the pods available in the cluster.
+Go to dig.go and follow the changes required to make a call to the REST API to list all the pods available in the cluster.
 
 # Testing
 ```
