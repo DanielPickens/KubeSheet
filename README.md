@@ -52,15 +52,16 @@ docker run kubewrap
 
 # Install package dependencies
 ```
-git clone https://github.com/DanielPickens/kubewrap.git 
-or
 go get https://github.com/DanielPickens/kubewrap.git
-
-git init
 ```
 
+#Cloning
+```
+ git clone https://github.com/DanielPickens/kubewrap.git 
+ ```
+
 kubewrap is a root command and dig is a sub command to that.
-For this case, we could have a set of subcommands such as below
+For this case, we could have a set of subcommands such as below:
 ```
  kubewrap dig1
  ```
@@ -74,7 +75,7 @@ So, to extend our existing skeleton to have subcommand, just execute the below:
 cobra add dig
 ```
 
-# Connect to cluster and config root.go
+# Connect to cluster and config root.go:
 
 a. Connect to a cluster using “kubeconfig” REST API call
 '''
