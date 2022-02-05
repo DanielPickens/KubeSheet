@@ -57,7 +57,6 @@ or
 go get https://github.com/DanielPickens/kubewrap.git
 
 git init
-
 ```
 
 kubewrap is a root command and dig is a sub command to that.
