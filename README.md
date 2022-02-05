@@ -103,6 +103,6 @@ go install
 kubewrap dig
 ```
 
-# Contributing
+# Contributions
 
 I welcome any recommendations and / or any contributions deemed a advantageous enhancement for the application. Please send a PR and I'll review as needed.
