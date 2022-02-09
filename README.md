@@ -79,7 +79,7 @@ So, to extend our existing skeleton to have subcommand, just execute the below:
 cobra add dig
 ```
 
-# Connect to cluster and config root.go:
+# Connect to cluster and config root.go
 
 a. Connect to a cluster using “kubeconfig” REST API call
 '''
