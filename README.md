@@ -15,7 +15,7 @@ Kubewrap is an kubernetes cli wrapper with a focus to explore the kubernetes RES
 cobra init --package-name kubewrap
 ```
 
-It will initialize the “kubewrap” project with cobra as the library. 
+It will initialize the kubewrap project with cobra as the library. 
 
 
 # Set up minikube
