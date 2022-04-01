@@ -1,6 +1,6 @@
 module github.com/DanielPickens/kubewrap
 
-go 1.1.8
+go 1.2.3
 
 require (
 	
