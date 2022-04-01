@@ -1,9 +1,9 @@
-# Kubewrap
+# Kubesheet
 [![forthebadge](https://forthebadge.com/images/badges/made-with-go.svg)](https://forthebadge.com)
 
 
 
-Kubewrap is an kubernetes cli wrapper with a focus to explore the kubernetes REST API's leveraging the go libraries available along with golang and cobra package.
+Kubesheet is an kubernetes cli wrapper with a focus to explore the kubernetes REST API's leveraging the go libraries available along with golang and cobra package.
 
 # Install  the cobra library:
 ```
@@ -12,15 +12,15 @@ Kubewrap is an kubernetes cli wrapper with a focus to explore the kubernetes RES
 # Create the CLI skeleton 
 
 ```
-cobra init --package-name kubewrap
+cobra init --package-name kubesheet
 ```
 
-It will initialize the kubewrap project with cobra as the library. 
+It will initialize the kubesheet project with cobra as the library. 
 
 
 # Set up minikube
 
- Execute below commands inside kubewrap folder. Minikube must be installed as it'll need to check for default server to connect to.
+ Execute below commands inside kubesheet folder. Minikube must be installed as it'll need to check for default server to connect to.
 ```
  go install
 ```
@@ -43,35 +43,35 @@ if ($oldPath.Split(';') -inotcontains 'C:\minikube'){ `
 # Docker
 
 ```
-docker build -o kubewrap main.go 
+docker build -o kubesheet main.go 
 ```
 
 ```
-docker pull kubewrap:latest
+docker pull kubesheet:latest
 ```
 ```
-docker run kubewrap
+docker run kubesheet
 ```
 
 # Install package dependencies
 ```
-go get https://github.com/DanielPickens/kubewrap.git
+go get https://github.com/DanielPickens/kubesheet.git
 ```
 
 # Cloning
 ```
- git clone https://github.com/DanielPickens/kubewrap.git 
+ git clone https://github.com/DanielPickens/kubesheet.git 
  ```
  
 # Root and Sub Command
 kubewrap is a root command and dig is a sub command to that.
 For this case, we could have a set of subcommands such as below:
 ```
- kubewrap dig1
+ kubesheet dig1
  ```
 will list out all the pods
 ```
- kubewrap dig2
+ kubesheet dig2
  ```
 This will list out all the deployments…vice versa.
 So, to extend our existing skeleton to have subcommand, just execute the below:
@@ -100,5 +100,5 @@ Go to dig.go and follow the changes required to make a call to the REST API to l
 go install
 ```
 ```
-kubewrap dig
+kubesheet dig
 ```
