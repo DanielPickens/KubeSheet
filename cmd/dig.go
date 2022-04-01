@@ -19,7 +19,8 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	metav1 "context.Context, k8s.io/apimachinery/pkg/apis/meta/v1"
+	
 )
 
 // digCmd represents the dig command
