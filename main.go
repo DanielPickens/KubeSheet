@@ -16,7 +16,7 @@ limitations under the License.
 package main
 
 import (
-	"kubewrap/cmd"
+	"kubesheet/cmd"
 )
 
 

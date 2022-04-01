@@ -1,4 +1,4 @@
-module Kubesheet
+module kubesheet
 
 go 1.17
 
