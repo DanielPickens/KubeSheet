@@ -64,7 +64,7 @@ go get https://github.com/DanielPickens/kubesheet.git
  ```
  
 # Root and Sub Command
-kubewrap is a root command and dig is a sub command to that.
+kubesheet is a root command and dig is a sub command to that.
 For this case, we could have a set of subcommands such as below:
 ```
  kubesheet dig1
