@@ -56,7 +56,7 @@ func init() {
   //fmt.Println("inside init")
   cobra.OnInitialize(initConfig)
 
-  rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.Kubewrap.yaml)")
+  rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.Kubesheet.yaml)")
 
   rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
@@ -73,7 +73,7 @@ func getClient()(*kubernetes.Clientset,error){
   // use the current context in kubeconfig
   config, err := clientcmd.BuildConfigFromFlags("", *kubeconfig)
   if err != nil {
-    //panic(err.Error())
+    panic(err.Error())
     return nil,err
   }
   return kubernetes.NewForConfig(config)
@@ -84,7 +84,7 @@ func homeDir() string {
   if h := os.Getenv("HOME"); h != "" {
     return h
   }
-  return os.Getenv("USERPROFILE") // windows
+  return os.Getenv("C:/") // windows
 }
 
 
@@ -104,7 +104,7 @@ func initConfig() {
 
     // Search config in home directory with name ".mykube" (without extension).
     viper.AddConfigPath(home)
-    viper.SetConfigName(".kubewrap")
+    viper.SetConfigName(".kubesheet")
   }
 
   viper.AutomaticEnv() // read in environment variables that match
