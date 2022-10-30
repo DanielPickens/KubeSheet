@@ -6,11 +6,9 @@ require (
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/spf13/cobra v1.4.0
 	github.com/spf13/viper v1.10.1
-
-)
-
-require (
-	k8s.io/apimachinery v0.25.3 // indirect
+	k8s.io/apimachinery/pkg/apis/meta v1.2.3 
+	
+	
 )
 
 require (
