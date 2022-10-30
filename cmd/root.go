@@ -31,87 +31,82 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 )
 
-
 var cfgFile string
-
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-  Use:   "kubesheet",
-  Short: "CLI utility",
-  Long: `CLI utility for kubernetes`,
-  	Run: func(cmd *cobra.Command, args []string) {  },
+	Use:   "kubesheet",
+	Short: "CLI utility",
+	Long:  `CLI utility for kubernetes`,
+	Run:   func(cmd *cobra.Command, args []string) {},
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
-  if err := rootCmd.Execute(); err != nil {
-    fmt.Println(err)
-    os.Exit(1)
-  }
+	if err := rootCmd.Execute(); err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 }
 
 func init() {
-  //fmt.Println("inside init")
-  cobra.OnInitialize(initConfig)
+	//fmt.Println("inside init")
+	cobra.OnInitialize(initConfig)
 
-  rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.Kubesheet.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.Kubesheet.yaml)")
 
-  rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
-func getClient()(*kubernetes.Clientset,error){
-  var kubeconfig *string
-  if home := homeDir(); home != "" {
-    kubeconfig = flag.String("kubeconfig", filepath.Join(home, ".kube", "config"), "C:\\Users\\danie\\.kube\\config")
-  } else {
-    kubeconfig = flag.String("kubeconfig", "", "absolute path to the kubeconfig file")
-  }
-  flag.Parse()
+func getClient() (*kubernetes.Clientset, error) {
+	var kubeconfig *string
+	if home := homeDir(); home != "" {
+		kubeconfig = flag.String("kubeconfig", filepath.Join(home, ".kube", "config"), "C:\\Users\\danie\\.kube\\config")
+	} else {
+		kubeconfig = flag.String("kubeconfig", "", "absolute path to the kubeconfig file")
+	}
+	flag.Parse()
 
-  // use the current context in kubeconfig
-  config, err := clientcmd.BuildConfigFromFlags("", *kubeconfig)
-  if err != nil {
-    panic(err.Error())
-    return nil,err
-  }
-  return kubernetes.NewForConfig(config)
+	// use the current context in kubeconfig
+	config, err := clientcmd.BuildConfigFromFlags("", *kubeconfig)
+	if err != nil {
+		panic(err.Error())
+		return nil, err
+	}
+	return kubernetes.NewForConfig(config)
 }
-
 
 func homeDir() string {
-  if h := os.Getenv("HOME"); h != "" {
-    return h
-  }
-  return os.Getenv("C:/") // windows
+	if h := os.Getenv("HOME"); h != "" {
+		return h
+	}
+	return os.Getenv("C:/") // windows
 }
-
 
 // initConfig reads in config file and ENV variables if set.
 func initConfig() {
-  //fmt.Println("inside initConfig")
-  if cfgFile != "" {
-    // Use config file from the flag.
-    viper.SetConfigFile(cfgFile)
-  } else {
-    // Find home directory.
-    home, err := homedir.Dir()
-    if err != nil {
-      fmt.Println(err)
-      os.Exit(1)
-    }
+	//fmt.Println("inside initConfig")
+	if cfgFile != "" {
+		// Use config file from the flag.
+		viper.SetConfigFile(cfgFile)
+	} else {
+		// Find home directory.
+		home, err := homedir.Dir()
+		if err != nil {
+			fmt.Println(err)
+			os.Exit(1)
+		}
 
-    // Search config in home directory with name ".mykube" (without extension).
-    viper.AddConfigPath(home)
-    viper.SetConfigName(".kubesheet")
-  }
+		// Search config in home directory with name ".mykube" (without extension).
+		viper.AddConfigPath(home)
+		viper.SetConfigName(".kubesheet")
+	}
 
-  viper.AutomaticEnv() // read in environment variables that match
+	viper.AutomaticEnv() // read in environment variables that match
 
-  // If a config file is found, read it in.
-  if err := viper.ReadInConfig(); err == nil {
-    fmt.Println("Using config file:", viper.ConfigFileUsed())
-  }
+	// If a config file is found, read it in.
+	if err := viper.ReadInConfig(); err == nil {
+		fmt.Println("Using config file:", viper.ConfigFileUsed())
+	}
 }
-

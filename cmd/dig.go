@@ -47,17 +47,16 @@ var digCmd = &cobra.Command{
 //Using the kubernetes client-go library to list pods in a cluster:
 
 func ListPods(clientset *kubernetes.Clientset) {
-	pods, err := clientset.CoreV1().Pods("").List(metav1.ListOptions{})
+	pods, err := clientset.CoreV1().Pods("").List(metav1.ListOptions{}, metav1.ListOptions{})
 	if err != nil {
 		panic(err.Error())
 	}
 	fmt.Printf("There are %d pods in the cluster\n", len(pods.Items))
 }
+
 var (
 	kubeconfig string
 )
-
-
 
 func init() {
 	rootCmd.AddCommand(digCmd)
