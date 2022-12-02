@@ -62,7 +62,7 @@ func init() {
 func getClient() (*kubernetes.Clientset, error) {
 	var kubeconfig *string
 	if home := homeDir(); home != "" {
-		kubeconfig = flag.String("kubeconfig", filepath.Join(home, ".kube", "config"), "C:\\Users\\danie\\.kube\\config")
+		kubeconfig = flag.String("kubeconfig", filepath.Join(home, ".kube", "config"), "C:\\Users\\example\\.kube\\config")
 	} else {
 		kubeconfig = flag.String("kubeconfig", "", "absolute path to the kubeconfig file")
 	}
