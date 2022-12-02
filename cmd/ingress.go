@@ -15,6 +15,17 @@ var IngressCmd = &cobra.Command{
 	ingress pod <pod-name>`
 
 	Run: func(cmd *cobra.Command, args []string) {
+		pods, err := getPods()
+		if err != nil {
+			panic(err.Error())
+		}
+		fmt.Printf("There are %d pods in the cluster/n", len(pods.Items))
+		for _, pod := range pods.Items {
+		fmt.Printf("Pod %s is running on node %s) /n", pod.Name, pod.Spec.NodeName)
+		}
+	},
+}
+
 
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {

@@ -54,10 +54,6 @@ func ListPods(clientset *kubernetes.Clientset) {
 	fmt.Printf("There are %d pods in the cluster\n", len(pods.Items))
 }
 
-var (
-	kubeconfig string
-)
-
 func init() {
 	rootCmd.AddCommand(digCmd)
 
